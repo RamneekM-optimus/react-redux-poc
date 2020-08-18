@@ -78,6 +78,7 @@ export class Profile extends Component {
                             <span>{location}</span>
                         </Fragment>
                     )}
+                    <hr/>
                     {website && (
                         <Fragment>
                             <LinkIcon color = 'primary'/>

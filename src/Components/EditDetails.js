@@ -34,6 +34,7 @@ export class EditDetails extends Component {
 
     componentWillReceiveProps(props) {
         const { credentials } = props;
+        console.log(credentials);
         this.setState({
             bio: credentials.bio || '',
             website: credentials.website || '',

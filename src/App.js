@@ -31,7 +31,6 @@ import axios from 'axios';
 
 const theme = createMuiTheme(ThemeFile);
 const token = localStorage.AuthToken;
-let authenticated;
 
 if (token) {
   const decodedToken = jwtDecode(token);

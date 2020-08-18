@@ -84,7 +84,7 @@ export class Scream extends Component {
         return (
             <Card className = {classes.card} style = {{"display": "flex", "marginBottom": "20px"}}>
                 <CardMedia 
-                image = {imageUrl}
+                image = {userImage}
                 title = "profile image"
                 className = {classes.image}
                 style = {{"minWidth": "200px", "margin": "0px"}}

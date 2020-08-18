@@ -80,8 +80,8 @@ export class signUp extends Component {
                         label = "Email"
                         className = {classes.textField}
                         value = {this.state.email}
-                        helperText = {this.state.errors.email}
-                        error = {this.state.errors.email ? true: false}
+                        helperText = {this.state.errors && this.state.errors.email}
+                        error = {(this.state.errors && this.state.errors.email) ? true: false}
                         onChange = {(e) => this.handleChange(e)}
                         fullWidth
                         >
@@ -93,8 +93,8 @@ export class signUp extends Component {
                         label = "Password"
                         className = {classes.textField}
                         value = {this.state.password}
-                        helperText = {this.state.errors.password}
-                        error = {this.state.errors.password ? true: false}
+                        helperText = {this.state.errors && this.state.errors.password}
+                        error = {this.state.errors && this.state.errors.password ? true: false}
                         onChange = {(e) => this.handleChange(e)}
                         fullWidth
                         >
@@ -106,8 +106,8 @@ export class signUp extends Component {
                         label = "Confirm Password"
                         className = {classes.textField}
                         value = {this.state.confirmPassword}
-                        helperText = {this.state.errors.confirmPassword}
-                        error = {this.state.errors.confirmPassword ? true: false}
+                        helperText = {this.state.errors && this.state.errors.confirmPassword}
+                        error = {this.state.errors && this.state.errors.confirmPassword ? true: false}
                         onChange = {(e) => this.handleChange(e)}
                         fullWidth
                         >
@@ -119,15 +119,15 @@ export class signUp extends Component {
                         label = "User Name"
                         className = {classes.textField}
                         value = {this.state.handle}
-                        helperText = {this.state.errors.confirmPassword}
-                        error = {this.state.errors.confirmPassword ? true: false}
+                        helperText = {this.state.errors && this.state.errors.confirmPassword}
+                        error = {(this.state.errors && this.state.errors.confirmPassword) ? true: false}
                         onChange = {(e) => this.handleChange(e)}
                         fullWidth
                         >
                         </TextField>
-                        {this.state.errors.general && (
+                        {this.state.errors && this.state.errors.general && (
                             <Typography variant = "body2" className = {classes.customError}>
-                                {this.state.errors.general}
+                                {this.state.errors && this.state.errors.general}
                             </Typography>
                         )
 

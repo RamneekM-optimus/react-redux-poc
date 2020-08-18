@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Grid  from '@material-ui/core/Grid';
-import axios from 'axios';
 import Scream from '../Components/Scream';
 import Profile  from '../Components/Profile';
 import {connect} from 'react-redux';
 import {getScreams} from '../Redux/actions/dataActions';
+import ScreamSkeleton from '../Util/ScreamSkeleton';
 
 export class home extends Component {
 
@@ -16,7 +16,7 @@ export class home extends Component {
         let recentScreenMarkup = screams ? (
             screams.map((scream, key) => <Scream key = {key} scream = {scream}>{scream.body}</Scream>)
         ) : (
-            <p>Loading....</p>
+            <ScreamSkeleton/>
         );
         return (
             <Grid container spacing = {8}>
